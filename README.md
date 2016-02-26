@@ -1,4 +1,4 @@
-# Behavioural Directives
+# Behavioral Directives
 
 ## Overview
 
@@ -6,17 +6,17 @@ Now we've learnt event directives, we can move onto the equally, if not more, po
 
 ## Objectives
 
-- Describe behavioural Directives
+- Describe behavioral Directives
 - Use ng-repeat
 - Use ng-model on an input
 - Interpolate ng-model result in the View
 - Conditionally add classes with ng-class
 
-## What's a behavioural directive?
+## What's a behavioral directive?
 
-Behavioural directives are directives that allow us to manipulate the DOM. For example, we could have a repeating list of items or we could hide/show a DOM node depending on a variables value.
+Behavioral directives are directives that allow us to manipulate the DOM. For example, we could have a repeating list of items or we could hide/show a DOM node depending on a variables value.
 
-Behavioural directives are commonly just used as attributes, and quite a lot are provided by Angular itself.
+Behavioral directives are commonly just used as attributes, and quite a lot are provided by Angular itself.
 
 Imagine we're not using Angular. If we wanted to loop through an array of objects and display them, we'd have to do something like this:
 
