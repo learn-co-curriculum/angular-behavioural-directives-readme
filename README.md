@@ -87,7 +87,7 @@ This handles everything - whenever our `todos` array is updated, Angular will up
 
 ## ng-model
 
-Along with `ng-repeat`, `ng-model` is one of the most commonly used directives provided by Angular. `ng-model` works it's magic by setting an input's value to a variable set in the controller, as well as updating said variable whenever the user updates the `<input />`'s value.
+Along with `ng-repeat`, `ng-model` is one of the most commonly used directives provided by Angular. `ng-model` works its magic by setting an input's value to a variable set in the controller, as well as updating said variable whenever the user updates the `<input />`'s value.
 
 ```html
 <input ng-model="vm.username" />
@@ -129,3 +129,5 @@ What is `ng-repeat="todo in vm.todos"` doing for us? We tell Angular what we wan
 `{{ todo.complete && 'Completed!' || 'Not completed :(' }}` looks a bit complicated too, but this is just similar to an expression that we would do in regular JavaScript. This checks the truthy value of `todo.complete`, and if `true` it will display "Completed!". If it's false, it will show "Not completed :(".
 
 Notice that all we have added there is `ng-class="{'complete': todo.complete}"` - this checks our todo item and adds the `complete` class if `todo.complete` is equal to true. It is really that simple!
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/angular-behavioural-directives-readme'>Angular Behavioral Directives </a> on Learn.co and start learning to code for free.</p>
