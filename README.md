@@ -59,7 +59,7 @@ The HTML:
   <li ng-repeat="todo in vm.todos">
     <h4>{{ todo.title }}</h4>
     
-    {{ todo.complete && 'Completed!' || 'Not completed :(' }}
+    {{ todo.complete ? 'Completed!' : 'Not completed :(' }}
   </li>
 </ul>
 ```
@@ -119,14 +119,14 @@ We can swap out `true` and `false` for different values, such as a variable's va
   <li ng-repeat="todo in vm.todos" ng-class="{'complete': todo.complete}">
     <h4>{{ todo.title }}</h4>
     
-    {{ todo.complete && 'Completed!' || 'Not completed :(' }}
+    {{ todo.complete ? 'Completed!' : 'Not completed :(' }}
   </li>
 </ul>
 ```
 
 What is `ng-repeat="todo in vm.todos"` doing for us? We tell Angular what we want to loop over (`vm.todos`) and what variable to put each items properties in (`todo`). We could do `ng-repeat="item in vm.todos"` for example.
 
-`{{ todo.complete && 'Completed!' || 'Not completed :(' }}` looks a bit complicated too, but this is just similar to an expression that we would do in regular JavaScript. This checks the truthy value of `todo.complete`, and if `true` it will display "Completed!". If it's false, it will show "Not completed :(".
+`{{ todo.complete ? 'Completed!' : 'Not completed :(' }}` looks a bit complicated too, but this is just similar to an expression that we would do in regular JavaScript. This checks the truthy value of `todo.complete`, and if `true` it will display "Completed!". If it's false, it will show "Not completed :(".
 
 Notice that all we have added there is `ng-class="{'complete': todo.complete}"` - this checks our todo item and adds the `complete` class if `todo.complete` is equal to true. It is really that simple!
 
