@@ -130,4 +130,10 @@ What is `ng-repeat="todo in vm.todos"` doing for us? We tell Angular what we wan
 
 Notice that all we have added there is `ng-class="{'complete': todo.complete}"` - this checks our todo item and adds the `complete` class if `todo.complete` is equal to true. It is really that simple!
 
+## Angular Controller and ng Directives Video 
+
+In this video we are going to build a simple CRUD app using controller and built-in `ng` directives.
+
+<iframe width="100%" height="720" src="https://www.youtube.com/embed/2YtGsacxiXE" frameborder="0" allowfullscreen></iframe>
+
 <p class='util--hide'>View <a href='https://learn.co/lessons/angular-behavioural-directives-readme'>Angular Behavioral Directives </a> on Learn.co and start learning to code for free.</p>
