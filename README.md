@@ -2,19 +2,19 @@
 
 ## Overview
 
-Now we've learnt event directives, we can move onto the equally, if not more, powerful behavioural directives.
+Now that we've learned about event directives, we can move onto the equally (if not more) powerful behavioral directives.
 
 ## Objectives
 
-- Describe behavioral Directives
+- Describe behavioral directives
 - Use ng-repeat
 - Use ng-model on an input
-- Interpolate ng-model result in the View
+- Interpolate an ng-model result in the View
 - Conditionally add classes with ng-class
 
 ## What's a behavioral directive?
 
-Behavioral directives are directives that allow us to manipulate the DOM. For example, we could have a repeating list of items or we could hide/show a DOM node depending on a variables value.
+Behavioral directives are directives that allow us to manipulate the DOM. For example, we could have a repeating list of items, or we could hide/show a DOM node depending on a variable's value.
 
 Behavioral directives are commonly just used as attributes, and quite a lot are provided by Angular itself.
 
@@ -46,11 +46,11 @@ todos.forEach(function (todo) {
 });
 ```
 
-This worked fine but what if our `todos` array was to get updated? We'd have to make sure to only insert the new items into our list, and only remove the correct elements when an item was removed from our array. This could get extremely messy and out of sync with our data if we were not really careful.
+This works fine, but what if our `todos` array was to get updated? We'd have to make sure to only insert the new items into our list and only remove the correct elements when an item was removed from our array. This could get extremely messy and out of sync with our data if we were not really careful.
 
 ## Angular saves the day!
 
-Try and contain your excitement when you see how this is done in Angular.
+Try to contain your excitement when you see how this is done in Angular.
 
 The HTML:
 
@@ -93,15 +93,15 @@ Along with `ng-repeat`, `ng-model` is one of the most commonly used directives p
 <input ng-model="vm.username" />
 ```
 
-This will populate our `<input />` with the value of `vm.username` (which could be empty), and then when the user types in the input, updates `vm.username` to match.
+This will populate our `<input />` with the value of `vm.username` (which could be empty), and then, when the user types in the input, it updates `vm.username` to match.
 
 [Check out this JSFiddle](https://jsfiddle.net/pjrfbkku/) showing the power of `ng-model`.
 
 ## ng-class
 
-Another task that's quite common in modern applications is dynamically adding and removing classes depending on different variables. For example, we might want to add a complete class on our example above if the todo is complete.
+Another task that's quite common in modern applications is dynamically adding and removing classes depending on different variables. For example, we might want to add a `complete` class on our example above if the todo is complete.
 
-We can do this using the power of `ng-class`. `ng-class` takes an object, with the keys being the class you want to dynamically add, and the value being an expression - when the expression evaluates to `true`, the class is added. When it's `false`, the class will be removed.
+We can do this using the power of `ng-class`. `ng-class` takes an object, with the keys being the class you want to dynamically add, and the value being an expression. When the expression evaluates to `true`, the class is added. When it's `false`, the class will be removed.
 
 For example:
 
@@ -110,9 +110,9 @@ For example:
 </div>
 ```
 
-In the example above, `classNameHere` would be added to our `<div />` (as the object's value is equal to true), whereas `otherClassName` wouldn't be added as the value is equal to false.
+In the example above, `classNameHere` would be added to our `<div />` (as the object's value is equal to true), whereas `otherClassName` wouldn't be added as the value is not equal to false.
 
-We can swap out `true` and `false` for different values, such as a variable's value. Let' do this for the todo items above.
+We can swap out `true` and `false` for different values, such as a variable's value. Let's do this for the todo items above.
 
 ```html
 <ul>
@@ -124,7 +124,7 @@ We can swap out `true` and `false` for different values, such as a variable's va
 </ul>
 ```
 
-What is `ng-repeat="todo in vm.todos"` doing for us? We tell Angular what we want to loop over (`vm.todos`) and what variable to put each items properties in (`todo`). We could do `ng-repeat="item in vm.todos"` for example.
+What is `ng-repeat="todo in vm.todos"` doing for us? We tell Angular what we want to loop over (`vm.todos`) and which variable to put each item's properties in (`todo`). We could do `ng-repeat="item in vm.todos"`, for example.
 
 `{{ todo.complete && 'Completed!' || 'Not completed :(' }}` looks a bit complicated too, but this is just similar to an expression that we would do in regular JavaScript. This checks the truthy value of `todo.complete`, and if `true` it will display "Completed!". If it's false, it will show "Not completed :(".
 
@@ -136,4 +136,4 @@ In this video we are going to build a simple CRUD app using controller and built
 
 <iframe width="100%" height="720" src="https://www.youtube.com/embed/2YtGsacxiXE" frameborder="0" allowfullscreen></iframe>
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/angular-behavioural-directives-readme'>Angular Behavioral Directives </a> on Learn.co and start learning to code for free.</p>
+<p class='util--hide'>View <a href='https://learn.co/lessons/angular-behavioural-directives-readme'>Angular Behavioral Directives</a> on Learn.co and start learning to code for free.</p>
